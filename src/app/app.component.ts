@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'usb-issue';
+	title='usb-issue';
+	clickMe() {
+		navigator.usb.requestDevice({
+			filters: [{}]
+		});
+	}
 }
